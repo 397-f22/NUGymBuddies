@@ -1,0 +1,39 @@
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #F5F5F5;
+    width: 100%;
+}
+
+.nav-title {
+    padding: 1%;
+    transition: color 0.5s ease-in;
+    color: #292c2e;
+    font-weight: bold;
+    font-size: 3em;
+}
+
+.nav-title>span.nav-title-nu {
+    transition: inherit;
+}
+
+.nav-title:hover {
+    color: black;
+}
+
+
+.nav-title:hover>span.nav-title-nu {
+    color: #4E2A84;
+}
+
+.form-outline {
+    flex: 1 1 auto!important;
+    flex-grow: 1 !important;
+    flex-shrink: 1 !important;
+    flex-basis: auto !important;
+}
+
+.nav-about-text {
+    color: #4E2A84;
+}
