@@ -2,12 +2,14 @@
     "gyms": {
         "name": "Henry Crown Sports Pavilion",
         "location": "2311 Campus Dr, Evanston, IL 60208",
-        "hours": "6am - 11pm",
+        "opens": "6",
+        "closes": "23",
         "popular_times": ["0","0","0","0","0",
-                          "5%","10%","7%","20%","30%",
+                          "0%","5%","10%","20%","30%",
                           "20%","25%","30%","10%","5%",
                           "35%","40%","45%","50%","60%",
-                          "45%","10%","5%","0","0"],
-        "id": "randomlyGeneratedId"
+                          "45%","10%","5%"],
+        "id": "randomlyGeneratedId",
+        "max_cap": "250"
     } 
 }
