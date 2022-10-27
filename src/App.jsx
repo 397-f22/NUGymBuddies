@@ -35,12 +35,12 @@ const App = () => {
     <div className="App">
       <div className="App-nav">
         <NavBar />
-<<<<<<< HEAD
-        <Chart></Chart>
-=======
+
+        <div className='card-container'>
         <GymCard name={gyms.name} location={gyms.location} popular_times={gyms.popular_times} max_cap={gyms.max_cap}/>
-        <GymCard name={gyms.name} location={gyms.location} popular_times={gyms.popular_times} max_cap={gyms.max_cap}/>
->>>>>>> e143285af27f29a5dd119fb277e59a95b8d07b2c
+
+        </div>
+        {/* <GymCard name={gyms.name} location={gyms.location} popular_times={gyms.popular_times} max_cap={gyms.max_cap}/> */}
       </div>
     </div>
   );
