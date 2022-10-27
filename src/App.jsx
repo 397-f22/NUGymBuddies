@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import GymCard from './components/GymCard';
-
+import Datepicker from './components/Datepicker';
 const gyms = {
   
       "name": "Henry Crown Sports Pavilion",
@@ -35,7 +35,7 @@ const App = () => {
     <div className="App">
       <div className="App-nav">
         <NavBar />
-
+        <Datepicker/>
         <div className='card-container'>
         <GymCard name={gyms.name} location={gyms.location} popular_times={gyms.popular_times} max_cap={gyms.max_cap}/>
 
