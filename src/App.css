@@ -49,3 +49,7 @@ button {
   align-items: center;
   
 }
+
+.date-picker {
+  padding: 3%;
+}

@@ -35,7 +35,12 @@ const App = () => {
     <div className="App">
       <div className="App-nav">
         <NavBar />
+        <div className="text">
+          <h3>Fancy a workout?</h3>
+        </div>
+        <div className="date-picker">
         <Datepicker/>
+        </div>
         <div className='card-container'>
         <GymCard name={gyms.name} location={gyms.location} popular_times={gyms.popular_times} max_cap={gyms.max_cap}/>
 

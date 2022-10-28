@@ -11,22 +11,26 @@ const Chart = ()=>{
 
     
     const option = {
+      
         xAxis: {
           type: 'category',
           data: x_data
         },
         yAxis: {
-          type: 'value'
+          type: 'value',
         },
         series: [
           {
             data: y_data,
-            type: 'bar'
+            type: 'bar',
           }
-        ]
+        ],
       };
     
-      return <ReactECharts option={option} />;
+      return <ReactECharts option={option} style={{
+        height: '11.9vh',
+        width: '100%',
+        padding: "3%",}}/>;
 
 
 }

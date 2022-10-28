@@ -11,7 +11,7 @@ export default function ResponsiveDatePickers() {
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <MobileDatePicker
-        label="Gym Days"
+        label="Pick a date"
         value={value}
         onChange={(newValue) => {
           setValue(newValue);
