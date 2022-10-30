@@ -1,9 +1,10 @@
 import './App.css';
 import NavBar from './components/NavBar';
 import GymCard from './components/GymCard';
-import Datepicker from './components/Datepicker';
+import Calendar from './components/Calendar';
 import Gyms from './Gyms';
 import {useState,useEffect} from 'react';  
+// import TimePicker from './components/TimePicker';
 
 const App = () => {
   const [day,setDay] = useState(null);
@@ -23,8 +24,8 @@ const App = () => {
             <h3>Fancy a workout?</h3>
           </div>
           <div className="date-picker">
-          <Datepicker setDay={setDay}/>
-          </div>
+          <Calendar setDay={setDay}/>
+  g        </div>
           {Gyms.map(gym => (
             <div className='card-container'>
             <GymCard name={gym.name} location={gym.location} popular_times={gym.popular_times} date={day} max_cap={gym.max_cap}/>
