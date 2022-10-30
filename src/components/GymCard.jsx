@@ -17,10 +17,10 @@ const GymCard = ({name,location,popular_times,max_cap}) => {
           Max capacity: {max_cap}
         </Card.Text>
         </div>
-        {/* <div className='chart-wrapper'> */}
+        <div className='chart-wrapper'>
         <Chart popular_times={popular_times}></Chart>
 
-        {/* </div> */}
+        </div>
         <Button style={{fontSize: 8}} variant="primary">Going</Button>
       </Card.Body>
     </Card>

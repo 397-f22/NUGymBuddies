@@ -1,5 +1,5 @@
 import ReactECharts from 'echarts-for-react';
-
+import "./Chart.css";
 
 const Chart = ({popular_times})=>{
     const x_data = ['6a','7a','8a','9a','10a','11a','12p','1p','2p','3p','4p','5p','6p','7p','8p','9p','10p','11p']
@@ -24,10 +24,12 @@ const Chart = ({popular_times})=>{
         ],
       };
     
-      return <ReactECharts option={option} style={{
-        height: '11.9vh',
-        width: '100%',
-        padding: "3%",}}/>;
+      // style={{
+      //   height: '8.1vh',
+      //   width: '100%',
+      //   padding: "3%",}}
+
+      return <ReactECharts option={option} />;
 
 
 }
