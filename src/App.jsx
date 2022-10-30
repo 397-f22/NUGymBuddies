@@ -1,8 +1,9 @@
 import './App.css';
 import NavBar from './components/NavBar';
 import GymCard from './components/GymCard';
-import Datepicker from './components/Datepicker';
+import Calendar from './components/Calendar';
 import Gyms from './Gyms';
+import TimePicker from './components/TimePicker';
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
           <h3>Fancy a workout?</h3>
         </div>
         <div className="date-picker">
-        <Datepicker/>
+        <Calendar/>
         </div>
         {Gyms.map(gym => (
           <div className='card-container'>
