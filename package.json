@@ -15,6 +15,7 @@
     "@mui/material": "^5.10.11",
     "@mui/x-date-pickers": "^5.0.5",
     "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.9.1",
     "dayjs": "^1.11.6",
     "echarts": "^5.4.0",
     "echarts-for-react": "^3.0.2",
@@ -22,6 +23,7 @@
     "mobiscroll-react": "^4.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",
+    "react-bootstrap-icons": "^1.9.1",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {

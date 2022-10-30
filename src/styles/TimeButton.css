@@ -1,0 +1,35 @@
+.not-selected{
+    display: block;
+	margin: 0 auto;
+	padding: 0;
+	width: 93.75px;
+	height: 26.25px;
+	border: 2px solid cornflowerblue;
+	border-radius: 40px;
+	background-color: white;
+	color:cornflowerblue;
+    margin: 3px;
+    font-size: 14px;
+	letter-spacing: 1px;
+	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+
+}
+
+.selected{
+    display: block;
+	margin: 0 auto;
+	padding: 0;
+	width: 93.75px;
+	height: 26.25px;
+	border: 2px solid cornflowerblue;
+	border-radius: 40px;
+	background-color: cornflowerblue;
+	color: white;
+	letter-spacing: 1px;
+    margin: 3px;
+	font-size: 14px;
+	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+
+}
