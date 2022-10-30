@@ -26,7 +26,8 @@ const App = () => {
           </div>
           <div className="date-picker">
           <Calendar setDay={setDay}/>
-  g        </div>
+          </div>
+          <TimePicker/>
           {Gyms.map(gym => (
             <div className='card-container'>
             <GymCard name={gym.name} location={gym.location} popular_times={gym.popular_times} date={day} max_cap={gym.max_cap}/>
