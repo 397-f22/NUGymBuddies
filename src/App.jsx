@@ -3,7 +3,7 @@ import NavBar from './components/NavBar';
 import GymCard from './components/GymCard';
 import Calendar from './components/Calendar';
 import Gyms from './Gyms';
-import TimePicker from './components/TimePicker';
+// import TimePicker from './components/TimePicker';
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
         </div>
         <div className="date-picker">
         <Calendar/>
-        </div>
+g        </div>
         {Gyms.map(gym => (
           <div className='card-container'>
           <GymCard name={gym.name} location={gym.location} popular_times={gym.popular_times} max_cap={gym.max_cap}/>
