@@ -23,7 +23,44 @@ Button {
     margin: 5%;
 }
 
-.card{
-    height: 40vh;
+/* .card{
+    height: 45vh;
 
+} */
+
+#goingButton {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.goingButton {
+    display: block;
+	padding: 0;
+	width: 93.75px;
+	height: 26.25px;
+	border: 2px solid cornflowerblue;
+	border-radius: 40px;
+	background-color: white;
+	color:cornflowerblue;
+    font-size: 14px;
+	letter-spacing: 1px;
+	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+}
+
+.goingButton:hover {
+    display: block;
+	padding: 0;
+	width: 93.75px;
+	height: 26.25px;
+	border: 2px solid cornflowerblue;
+	border-radius: 40px;
+	background-color: cornflowerblue;
+	color: white;
+	letter-spacing: 1px;
+	font-size: 14px;
+	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
 }

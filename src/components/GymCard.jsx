@@ -19,9 +19,8 @@ const GymCard = ({name,location,popular_times,max_cap, date}) => {
         </div>
         <div className='chart-wrapper'>
         <Chart popular_times={popular_times} date={date}></Chart>
-
         </div>
-        <Button style={{fontSize: 8}} variant="primary">Going</Button>
+        <Button id="goingButton" className="goingButton" style={{fontSize: 8}}>Going</Button>
       </Card.Body>
     </Card>
 

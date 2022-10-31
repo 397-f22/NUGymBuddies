@@ -17,7 +17,7 @@
     display: block;
 	margin: 0 auto;
 	padding: 0;
-	width: 95%;
+	width: 95vw;
 	height: 30.25px;
 	border: 2px solid cornflowerblue;
 	border-radius: 2px;
@@ -28,13 +28,20 @@
     margin: 10px;
 	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
 	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
-
 }
+
+.openButton-close:hover{
+	cursor: pointer;
+	background-color: rgb(185, 209, 255);
+	/* color: white; */
+	/* font-weight: bolder; */
+}
+
 .openButton-close{
     display: block;
 	margin: 0 auto;
 	padding: 0;
-	width: 95%;
+	width: 95vw;
 	height: 30.25px;
 	border: 2px solid cornflowerblue;
 	border-radius: 2px;
@@ -45,10 +52,25 @@
     margin: 10px;
 	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
 	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+}
 
+.openButton-open:hover{
+	cursor: pointer;
+	background-color: rgb(185, 209, 255);
+	color: white;
 }
 
 .dropdown{
     align-items: center;
+	justify-content: center;
+	display: flex;
+}
+
+.dropdownBlock {
+	display: block;
+}
+
+.marginAuto {
+	margin: 0 auto;
 }
 

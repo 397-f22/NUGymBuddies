@@ -16,6 +16,11 @@
 
 }
 
+.not-selected :hover {
+	cursor: pointer;
+	font-weight: bolder;
+}
+
 .selected{
     display: block;
 	margin: 0 auto;
@@ -31,5 +36,9 @@
 	font-size: 14px;
 	-webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
 	transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+}
 
+.selected :hover{
+	cursor: pointer;
+	font-weight: bolder;
 }
