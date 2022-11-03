@@ -15,6 +15,7 @@ export default function ResponsiveDatePickers({setDay}) {
   //   day = day.toString().slice(0,3);
   //   console.log(day);
   // },[value])
+  
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <MobileDatePicker
@@ -22,6 +23,7 @@ export default function ResponsiveDatePickers({setDay}) {
         value={value}
         onChange={(newValue) => {
           setValue(newValue);
+          console.log(newValue);
           setDay(newValue["$d"].toString().slice(0,3));
          }}
         renderInput={(params) => <TextField {...params} />}

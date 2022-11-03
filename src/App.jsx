@@ -12,10 +12,12 @@ const App = () => {
   useEffect(()=>{
     const start = Date.now();
     const today = new Date(start);
-    // console.log();
+    //console.log(today.toDateString());
     setDay(today.toDateString().slice(0,3))
 
   },[])
+  const [time, setTime] = useState([]);
+  
   if(day!=null){
     return (
       <div className="App">
@@ -27,10 +29,10 @@ const App = () => {
           <div className="date-picker">
           <Calendar setDay={setDay}/>
           </div>
-          <TimePicker/>
+          <TimePicker setTime={setTime}/>
           {Gyms.map(gym => (
             <div className='card-container'>
-            <GymCard name={gym.name} location={gym.location} popular_times={gym.popular_times} date={day} max_cap={gym.max_cap}/>
+            <GymCard name={gym.name} location={gym.location} popular_times={gym.popular_times} date={day} time={time}max_cap={gym.max_cap}/>
             </div>
           ))}
         </div>

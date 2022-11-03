@@ -13,20 +13,23 @@ const days = {
     Friday: [0]*24,
     Saturday: [0]*24,
 }
-const TimePicker = () => {
-    const [selectArray, setSelectArray] = useState([])
+const TimePicker = ({setTime}) => {
+    const [value, setValue] = useState([]);
     const [open,setOpen] = useState(false)
     const toggleTime = (id) =>{
-        const newSelectArray = [...selectArray];
+        const newSelectArray = [...value];
+        //console.log('state:',newSelectArray)
         const index = newSelectArray.indexOf(id);
         if (index === -1) {
             newSelectArray.push(id);
         } else {
             newSelectArray.splice(index, 1);
         }
-        console.log('new', newSelectArray)
-        setSelectArray(newSelectArray);
-        console.log('state',selectArray)
+        //console.log('new', selectArray);
+        //console.log('state2',newSelectArray);
+        setValue(newSelectArray)
+        setTime(newSelectArray);
+        
     }
     const openMenu = () =>{
         setOpen(!open)
