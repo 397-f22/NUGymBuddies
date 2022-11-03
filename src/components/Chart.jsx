@@ -2,7 +2,7 @@ import ReactECharts from 'echarts-for-react';
 import { useEffect } from 'react';
 import "./Chart.css";
 
-const Chart = ({popular_times, date, time})=>{
+const Chart = ({popular_times, date, time, threshold})=>{
   useEffect(()=>{
     // console.log("chart",date);
   },[date])
@@ -12,7 +12,6 @@ const Chart = ({popular_times, date, time})=>{
    
     const y_data_before = popular_times[date].filter((x,i)=> i>=6);
     const y_data = y_data_before.map((x,i)=> parseInt(x.replace("%","")));
-    const threshold = 25;
     console.log("y_data", y_data);
     const y_data_green = x_data_form_time.map((x)=> {
       if (time.includes(x.toString()) && y_data[x-6] < threshold) {
