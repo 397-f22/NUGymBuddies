@@ -6,9 +6,14 @@ import Gyms from './Gyms';
 import {useState,useEffect} from 'react';  
 import TimePicker from './components/TimePicker';
 import { Dropdown } from 'bootstrap';
+import Slider from '@mui/material/Slider';
 
 const App = () => {
   const [day,setDay] = useState(null);
+  function valuetext(value) {
+    return `${value} %`;
+  }
+  
   useEffect(()=>{
     const start = Date.now();
     const today = new Date(start);
@@ -17,7 +22,12 @@ const App = () => {
 
   },[])
   const [time, setTime] = useState([]);
-  
+  const [threshold,setThreshold] = useState(0)
+  const handleChange = (event, newValue) => {
+    setThreshold(newValue);
+    console.log(threshold)
+  };
+
   if(day!=null){
     return (
       <div className="App">
@@ -26,13 +36,15 @@ const App = () => {
           <div className="text">
             <h3>Fancy a workout?</h3>
           </div>
-          <div className="date-picker">
+          <div className="date-picker">   
           <Calendar setDay={setDay}/>
+          <h4>Capacity</h4>
+          <Slider defaultValue={0} aria-label="Threshold" valueLabelDisplay="auto" step={5} getAriaValueText={valuetext} onChange={handleChange} onChangeCommitted={handleChange} min={0} max={100}/>
           </div>
           <TimePicker setTime={setTime}/>
           {Gyms.map(gym => (
             <div className='card-container'>
-            <GymCard name={gym.name} location={gym.location} popular_times={gym.popular_times} date={day} time={time}max_cap={gym.max_cap}/>
+            <GymCard name={gym.name} location={gym.location} popular_times={gym.popular_times} date={day} time={time}max_cap={gym.max_cap} threshold={threshold}/>
             </div>
           ))}
         </div>

@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Chart from './Chart';
 import "./GymCard.css";
-const GymCard = ({name,location,popular_times,max_cap, date, time}) => {
+const GymCard = ({name,location,popular_times,max_cap, date, time, threshold}) => {
  
   return (
     <div className='card-wrapper'>
@@ -15,11 +15,11 @@ const GymCard = ({name,location,popular_times,max_cap, date, time}) => {
           {location}
         </Card.Text>
         <Card.Text style={{fontSize: 6}}>
-          Max capacity: {max_cap}
+          Max capacity: {max_cap},
         </Card.Text>
         </div>
         <div className='chart-wrapper'>
-        <Chart popular_times={popular_times} date={date} time={time}></Chart>
+        <Chart popular_times={popular_times} date={date} time={time} threshold={threshold}></Chart>
         </div>
         <Button id="goingButton" className="goingButton" style={{fontSize: 8}}>Going</Button>
       </Card.Body>
