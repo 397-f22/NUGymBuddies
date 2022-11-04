@@ -15,7 +15,7 @@ const GymCard = ({name,location,popular_times,max_cap, date, time, threshold}) =
           {location}
         </Card.Text>
         <Card.Text style={{fontSize: 6}}>
-          Max capacity: {max_cap},
+          Max capacity: {max_cap}
         </Card.Text>
         </div>
         <div className='chart-wrapper'>
