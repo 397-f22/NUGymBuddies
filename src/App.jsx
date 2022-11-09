@@ -7,6 +7,7 @@ import {useState,useEffect} from 'react';
 import TimePicker from './components/TimePicker';
 import { Dropdown } from 'bootstrap';
 import Slider from '@mui/material/Slider';
+import Friends from './components/Friends';
 
 const App = () => {
   const [day,setDay] = useState(null);
@@ -47,6 +48,7 @@ const App = () => {
             <GymCard name={gym.name} location={gym.location} popular_times={gym.popular_times} date={day} time={time}max_cap={gym.max_cap} threshold={threshold}/>
             </div>
           ))}
+          <Friends />
         </div>
       </div>
     );
