@@ -48,7 +48,7 @@ const App = () => {
               </div>
               <div className="legendDiv">
                 <h4>Legend</h4>
-                <h6>🟦 = Current Occupancy | 🟩 = Under Selected Capacity | 🟥 = Over Selected Capacity</h6>
+                <h5>🟦 = Current Occupancy | 🟩 = Under Selected Capacity | 🟥 = Over Selected Capacity</h5>
               </div>
               {Gyms.map(gym => (
                 <div className='card-container'>
