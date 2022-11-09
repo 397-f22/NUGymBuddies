@@ -61,10 +61,11 @@ button {
 }
 
 .grid {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(2, 1fr);
   width: calc(100vw-30px);
   margin: 15px;
+  flex-direction: column-reverse;
 }
 
 .gridHalf1 {
