@@ -1,0 +1,293 @@
+commit 1f401f71b1f349772e400e37825fe541880d5786
+Author: Andre Becker Norton <andrenorton2022@u.northwestern.edu>
+Date:   Thu Nov 3 19:29:45 2022 -0500
+
+    small styling fix for card
+
+M	src/components/GymCard.jsx
+
+commit 23326e0ce9cadaeac1645222dc4aea1abd2e56cb
+Author: Stephanie <stephanieyaur2022@u.northwestern.edu>
+Date:   Thu Nov 3 19:26:59 2022 -0500
+
+    Attempt to add legent to chart
+
+M	src/components/Chart.jsx
+
+commit c97db4586a2ada6554c2a4f0ac397a747cd2a100
+Author: Chris Naing <clnaing23@gmail.com>
+Date:   Thu Nov 3 18:56:08 2022 -0500
+
+    slider
+
+M	src/App.jsx
+M	src/components/Chart.jsx
+M	src/components/GymCard.jsx
+
+commit 5deeece69b39dcc3ab809d239b7d93b13308c8f5
+Author: Stephanie <stephanieyaur2022@u.northwestern.edu>
+Date:   Thu Nov 3 18:10:55 2022 -0500
+
+    Fix chart color bug
+
+A	.github/workflows/firebase-hosting-merge.yml
+A	.github/workflows/firebase-hosting-pull-request.yml
+A	database.rules.json
+A	dist/assets/bootstrap-icons.13977b4a.woff
+A	dist/assets/bootstrap-icons.c69bf1cc.woff2
+D	dist/assets/index.17214ba5.js
+D	dist/assets/index.8856250e.css
+A	dist/assets/index.a0c74ffc.js
+A	dist/assets/index.b753bec6.css
+D	dist/assets/logo.ecc203fb.svg
+M	dist/index.html
+M	firebase.json
+A	public/404.html
+M	src/components/Chart.jsx
+
+commit 6e6ad2ab43be58ed9e4799c22980e09ad0fb9378
+Author: jazzgobbo <jazzgobbo@gmail.com>
+Date:   Thu Nov 3 17:15:15 2022 -0500
+
+    in process of changing chart color
+
+M	src/components/Chart.jsx
+
+commit c7cf6c1d0117dee9aa93f30d2c94c221cec12c8e
+Author: shaoming <xsm90827@gmail.com>
+Date:   Thu Nov 3 14:58:14 2022 -0500
+
+    pass color variable to chart
+
+M	src/App.jsx
+M	src/components/Calendar.jsx
+M	src/components/Chart.jsx
+M	src/components/GymCard.jsx
+M	src/components/TimePicker.jsx
+
+commit 80584fc9d5e05c99b3d1ce68c87fd35656a7992a
+Author: Stephanie <stephanieyaur2022@u.northwestern.edu>
+Date:   Mon Oct 31 03:34:05 2022 -0500
+
+    Styling
+
+M	src/components/GymCard.css
+M	src/components/GymCard.jsx
+M	src/components/TimePicker.jsx
+M	src/styles/TimeButton.css
+M	src/styles/TimePicker.css
+
+commit 39c7188543e4102c25caf635152808568795bbf2
+Author: Chris Naing <clnaing23@gmail.com>
+Date:   Sun Oct 30 17:08:12 2022 -0500
+
+    timepicker
+
+M	src/App.jsx
+
+commit cf1e197f906da93328c8bf98c8be2ede93e960d7
+Author: Chris Naing <clnaing23@gmail.com>
+Date:   Sun Oct 30 17:02:44 2022 -0500
+
+    Timepicker
+
+M	package-lock.json
+M	package.json
+M	src/App.jsx
+A	src/components/DropDown.jsx
+A	src/components/TimeButton.jsx
+M	src/components/TimePicker.jsx
+A	src/icons/arrow.svg
+A	src/styles/TimeButton.css
+A	src/styles/TimePicker.css
+
+commit 09be7716009876cb2f182e5fc96e85e952f8c146
+Author: zhenming wang <zhenmingwang@zhenmingdembp.ads.northwestern.edu>
+Date:   Sun Oct 30 15:32:10 2022 -0500
+
+    get date
+
+M	src/App.jsx
+M	src/Gyms.js
+M	src/components/Chart.jsx
+M	src/components/Datepicker.jsx
+M	src/components/GymCard.jsx
+
+commit 489f252c0e3ce9a8c7ecaf0224608acfbe99919f
+Author: Chris Naing <clnaing23@gmail.com>
+Date:   Sun Oct 30 13:50:56 2022 -0500
+
+    fix
+
+M	src/App.jsx
+M	src/components/TimePicker.jsx
+
+commit 27c10b60b32ebc68cfa73bc0776dcacd6ad5e7f1
+Author: Chris Naing <clnaing23@gmail.com>
+Date:   Sun Oct 30 13:46:29 2022 -0500
+
+    changed datepicker name
+
+M	package-lock.json
+M	package.json
+M	src/App.jsx
+R100	src/components/Datepicker.jsx	src/components/Calendar.jsx
+A	src/components/TimePicker.jsx
+
+commit a9e8c540081324e8d2835a6c2ad0fbfbf197a9dd
+Author: zhenming wang <zhenmingwang@zhenmingdembp.ads.northwestern.edu>
+Date:   Sun Oct 30 13:46:01 2022 -0500
+
+    card style
+
+M	src/Gyms.js
+A	src/components/Chart.css
+M	src/components/Chart.jsx
+M	src/components/GymCard.css
+M	src/components/GymCard.jsx
+
+commit 5b681f14155f8c9cf44cefb009b54b0280c62761
+Author: Stephanie <stephanieyaur2022@u.northwestern.edu>
+Date:   Sat Oct 29 16:24:51 2022 -0500
+
+    Added another gym data and logic to map dataon cards
+
+M	src/App.jsx
+A	src/Gyms.js
+D	src/Gyms.json
+M	src/components/Chart.jsx
+M	src/components/GymCard.jsx
+
+commit c3178ed217f1e0eec3769c7765b7eeef1fd46099
+Author: jazzgobbo <jazzgobbo@gmail.com>
+Date:   Fri Oct 28 18:21:53 2022 -0500
+
+    deployed to firebase
+
+A	dist/assets/index.17214ba5.js
+A	dist/assets/index.8856250e.css
+A	dist/assets/logo.ecc203fb.svg
+A	dist/favicon.svg
+A	dist/index.html
+A	dist/robots.txt
+M	firebase.json
+
+commit 1f0d2db926d78ef447ea37ea48064cfd6f526764
+Author: jazzgobbo <jazzgobbo@gmail.com>
+Date:   Fri Oct 28 14:25:59 2022 -0500
+
+    styled the gym card
+
+M	src/App.css
+M	src/App.jsx
+M	src/components/Chart.jsx
+M	src/components/Datepicker.jsx
+M	src/components/GymCard.css
+M	src/components/GymCard.jsx
+
+commit d526e774f0f62e998b5a97221af97f4ec13229a3
+Author: Chris Naing <clnaing23@gmail.com>
+Date:   Thu Oct 27 17:00:53 2022 -0500
+
+    merged
+
+M	package-lock.json
+M	package.json
+M	src/App.jsx
+A	src/components/Datepicker.jsx
+
+commit b128536d66897d9fb0d6a0c611cacb8d954c29b0
+Author: zhenming wang <zhenmingwang@zhenmingdembp.ads.northwestern.edu>
+Date:   Thu Oct 27 16:10:27 2022 -0500
+
+    chard on card
+
+M	package-lock.json
+M	src/App.css
+M	src/App.jsx
+M	src/Gyms.json
+M	src/components/Chart.jsx
+A	src/components/GymCard.css
+M	src/components/GymCard.jsx
+
+commit 60d77232cb7d5c690397cdb8a7cc8f7329ddafbd
+Author: zhenming wang <zhenmingwang@zhenmingdembp.ads.northwestern.edu>
+Date:   Thu Oct 27 15:42:41 2022 -0500
+
+    chart
+
+M	package-lock.json
+M	package.json
+M	src/App.jsx
+M	src/Gyms.json
+A	src/components/Chart.jsx
+
+commit e143285af27f29a5dd119fb277e59a95b8d07b2c
+Author: shaoming <xsm90827@gmail.com>
+Date:   Thu Oct 27 15:30:18 2022 -0500
+
+    Gym card
+
+M	package-lock.json
+M	package.json
+M	src/App.jsx
+M	src/Gyms.json
+A	src/components/GymCard.jsx
+
+commit 49c1ae42a3ee3f23f8bf0115bab116a48293099a
+Author: jazzgobbo <jazzgobbo@gmail.com>
+Date:   Thu Oct 27 14:45:15 2022 -0500
+
+    updated gym.json
+
+M	src/Gyms.json
+
+commit c934ea715d5228a59230b36cf491abd6277da87d
+Author: jazzgobbo <jazzgobbo@gmail.com>
+Date:   Thu Oct 27 11:01:38 2022 -0500
+
+    added idea for json format for gyms
+
+A	src/Gyms.json
+
+commit 9f9a74bbe222400e0a6a4191cb7968ca80d32578
+Author: jazzgobbo <jazzgobbo@gmail.com>
+Date:   Thu Oct 27 10:19:21 2022 -0500
+
+    added nav bar (without MUI)
+
+M	src/App.css
+M	src/App.jsx
+A	src/components/NavBar.jsx
+A	src/styles/NavBar.css
+
+commit b9fd499618b6466368782cbd6558496cac51d893
+Author: jazzgobbo <jazzgobbo@gmail.com>
+Date:   Tue Oct 25 16:05:26 2022 -0500
+
+    connected to firebase
+
+A	firebase.json
+A	public/index.html
+
+commit 95554cba3b5143fdd750ed8d86c20788a0269853
+Author: jazzgobbo <jazzgobbo@gmail.com>
+Date:   Tue Oct 25 15:51:58 2022 -0500
+
+    created app using vite
+
+A	.gitignore
+A	LICENSE
+A	README.md
+A	index.html
+A	package-lock.json
+A	package.json
+A	public/favicon.svg
+A	public/robots.txt
+A	src/App.css
+A	src/App.jsx
+A	src/App.test.jsx
+A	src/index.css
+A	src/index.jsx
+A	src/logo.svg
+A	vite.config.js
