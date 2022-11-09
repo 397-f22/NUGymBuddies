@@ -1,6 +1,5 @@
-const Gyms =
-[
-  {
+{
+  "gym1": {
     "name": "Henry Crown Sports Pavilion",
     "location": "2311 Campus Dr, Evanston, IL 60208",
     "opens": "6",
@@ -121,7 +120,7 @@ const Gyms =
     "id": "randomlyGeneratedId",
     "max_cap": "250"
   },
-  {
+  "gym2": {
     "name": "Blomquist Recreation Center",
     "location": "617 Foster St, Evanston, IL 60201",
     "opens": "7",
@@ -241,7 +240,5 @@ const Gyms =
     },
     "id": "randomlyGeneratedId",
     "max_cap": "160"
-  },
-]
-
-export default Gyms;
+  }
+}
