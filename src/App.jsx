@@ -11,10 +11,10 @@ import Friends from './components/Friends';
 import RoomSelector from './components/RoomSelector';
 
 const App = () => {
-  const [data, error] = useDbData('/');
-  if (error) return <h1>Error loading data: {error.toString()}</h1>;
-  if (data === undefined) return <h1>Loading data...</h1>;
-  if (!data) return <h1>No data found</h1>;
+  // const [data, error] = useDbData('/');
+  // if (error) return <h1>Error loading data: {error.toString()}</h1>;
+  // if (data === undefined) return <h1>Loading data...</h1>;
+  // if (!data) return <h1>No data found</h1>;
   
   const [day,setDay] = useState(null);
   function valuetext(value) {
@@ -34,7 +34,7 @@ const App = () => {
     setThreshold(newValue);
     console.log(threshold)
   };
-
+  
   if(day!=null){
     return (
       <div className="App">
@@ -56,11 +56,20 @@ const App = () => {
                 <h4>Legend</h4>
                 <h5>🟦 = Current Occupancy | 🟩 = Under Selected Capacity | 🟥 = Over Selected Capacity</h5>
               </div>
-              {Gyms.map(gym => (
-                <div className='card-container'>
-                  <GymCard name={gym.name} location={gym.location} popular_times={gym.popular_times} date={day} time={time}max_cap={gym.max_cap} threshold={threshold}/>
-                </div>
-              ))}
+              {Gyms.map(gym => {
+                let room = "cardio";
+                let room_data;
+                if(room == "cardio"){
+                  room_data = gym.rooms.cardio;
+                }else if(room == "weight"){
+                  room_data = gym.rooms.weight;
+                }else{
+                  room_data = gym.rooms.basketball;
+                }
+                return (<div className='card-container'>
+                  <GymCard name={gym.name} location={gym.location} popular_times={room_data} date={day} time={time}max_cap={gym.max_cap} threshold={threshold} />
+                </div>)
+              })}
             </div>
             <div className="gridHalf2">
               <RoomSelector />
