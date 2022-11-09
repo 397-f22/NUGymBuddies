@@ -1,0 +1,13 @@
+.sign-button{
+    width: 60.75px;
+    height: 26.25px;
+    border: 2px solid cornflowerblue;
+    border-radius: 40px;
+    background-color: white;
+    color: cornflowerblue;
+    margin-left: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    -webkit-transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+    transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+}
