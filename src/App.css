@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  display: flex;
+}
+
+.App-nav {
+  width:100vw;
 }
 
 .App-logo {
@@ -51,5 +56,30 @@ button {
 }
 
 .date-picker {
-  padding: 3%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: calc(100vw-30px);
+  margin: 15px;
+}
+
+.gridHalf1 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+.gridHalf2 {
+  grid-column-start: 2;
+  grid-column-end: 2;
+}
+
+.capacityDiv {
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }

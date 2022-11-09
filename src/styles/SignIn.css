@@ -1,5 +1,6 @@
 .sign-button{
-    width: 60.75px;
+    min-width: 80px;
+    width: fit-content;
     height: 26.25px;
     border: 2px solid cornflowerblue;
     border-radius: 40px;

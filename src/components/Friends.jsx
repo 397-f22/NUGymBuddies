@@ -1,27 +1,17 @@
 import "../styles/Friends.css";
 
 const Friends = () => (
-    <div style={{width: "fit-content"}}>
-        <h3>Friend 1</h3>
-        <h4>Gym 1</h4>
-        <ul>
-            <li>11pm-2pm</li>
-            <li>3pm-4pm</li>
-        </ul>
-        <h4>Gym 2</h4>
-        <ul>
-            <li>4pm-5pm</li>
-        </ul>
-        <h3>Friend 2</h3>
-        <h4>Gym 1</h4>
-        <ul>
-            <li>11pm-2pm</li>
-            <li>3pm-4pm</li>
-        </ul>
-        <h4>Gym 2</h4>
-        <ul>
-            <li>4pm-5pm</li>
-        </ul>
+    <div className="friend-container">
+        <div class="friend-box">
+            <p className="friend-name">Chris</p>
+            <p className="item">- SPAC 11am-12pm</p>
+            <p className="item">- Blomquist 3pm-4pm</p>
+        </div>
+        <div className="friend-box">
+            <p className="friend-name">Risbeck</p>
+            <p className="item">- SPAC 11am-2pm</p>
+            <p className="item">- Blomquist 11pm-2pm</p>
+        </div>
     </div>
 )
 

@@ -38,17 +38,25 @@ const App = () => {
             <h3>Fancy a workout?</h3>
           </div>
           <div className="date-picker">   
-          <Calendar setDay={setDay}/>
-          <h4>Capacity</h4>
-          <Slider defaultValue={0} aria-label="Threshold" valueLabelDisplay="auto" step={5} getAriaValueText={valuetext} onChange={handleChange} onChangeCommitted={handleChange} min={0} max={100}/>
+            <Calendar setDay={setDay}/>
           </div>
-          <TimePicker setTime={setTime}/>
-          {Gyms.map(gym => (
-            <div className='card-container'>
-            <GymCard name={gym.name} location={gym.location} popular_times={gym.popular_times} date={day} time={time}max_cap={gym.max_cap} threshold={threshold}/>
+          <div className="grid">
+            <div className="gridHalf1">
+              <div className="capacityDiv">
+                <h4>Capacity</h4>
+                <Slider defaultValue={0} aria-label="Threshold" valueLabelDisplay="auto" step={5} getAriaValueText={valuetext} onChange={handleChange} onChangeCommitted={handleChange} min={0} max={100}/>
+              </div>
+              {Gyms.map(gym => (
+                <div className='card-container'>
+                  <GymCard name={gym.name} location={gym.location} popular_times={gym.popular_times} date={day} time={time}max_cap={gym.max_cap} threshold={threshold}/>
+                </div>
+              ))}
             </div>
-          ))}
-          <Friends />
+            <div className="gridHalf2">
+              <Friends />
+              <TimePicker setTime={setTime}/>
+            </div>
+          </div>
         </div>
       </div>
     );

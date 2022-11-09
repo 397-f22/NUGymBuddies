@@ -1,7 +1,37 @@
+.friend-name {
+    font-weight: 450;
+    margin: 0;
+    font-size: large;
+    border-bottom: 1px solid lightgray;
+}
+
 h4 {
     margin: 0;
+    font-weight: normal;
 }
 
 ul {
     margin: 0;
+}
+
+li {
+    text-align: left;
+}
+
+.friend-box {
+    text-align: left;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid lightgray;
+    width: fit-content;
+}
+
+.friend-container {
+    display: inline-flex;
+}
+
+.item {
+    font-weight: 350;
+    margin: 2px;
+    font-size: medium;
 }
