@@ -1,10 +1,14 @@
 import '../styles/NavBar.css';
+import SignIn from './signin';
 
 const NavBar = () => {
     return (
       <nav className="nav">
         <div className="nav-title">
           <span className="nav-title-nu">NU</span>GymBuddies
+          <div className='auth-button'>
+            <SignIn/>
+          </div>
         </div>
         {/*<div className="form-outline">
             {<Search />}
