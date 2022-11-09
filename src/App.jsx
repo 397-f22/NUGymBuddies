@@ -8,6 +8,7 @@ import TimePicker from './components/TimePicker';
 import { Dropdown } from 'bootstrap';
 import Slider from '@mui/material/Slider';
 import Friends from './components/Friends';
+import RoomSelector from './components/RoomSelector';
 
 const App = () => {
   const [data, error] = useDbData('/');
@@ -62,7 +63,7 @@ const App = () => {
               ))}
             </div>
             <div className="gridHalf2">
-              <Friends />
+              <RoomSelector />
               <TimePicker setTime={setTime}/>
             </div>
           </div>
