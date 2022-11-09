@@ -22,7 +22,7 @@ const App = () => {
 
   },[])
   const [time, setTime] = useState([]);
-  const [threshold,setThreshold] = useState(0)
+  const [threshold,setThreshold] = useState(30)
   const handleChange = (event, newValue) => {
     setThreshold(newValue);
     console.log(threshold)
