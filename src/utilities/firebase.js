@@ -17,9 +17,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const firebase = initializeApp(firebaseConfig);
-
 const database = getDatabase(firebase);
-
 export const signInWithGoogle = () => {
   signInWithPopup(getAuth(firebase), new GoogleAuthProvider());
 };

@@ -37,7 +37,7 @@ const App = () => {
     setThreshold(newValue);
     console.log(threshold)
   };
-
+  
   if(day!=null){
     return (
       <div className="App">
@@ -55,15 +55,25 @@ const App = () => {
                 <h4>Capacity</h4>
                 <Slider defaultValue={0} aria-label="Threshold" valueLabelDisplay="auto" step={5} getAriaValueText={valuetext} onChange={handleChange} onChangeCommitted={handleChange} min={0} max={100}/>
               </div>
+              <RoomSelector />
               <div className="legendDiv">
                 <h4>Legend</h4>
                 <h5>🟦 = Current Occupancy | 🟩 = Under Selected Capacity | 🟥 = Over Selected Capacity</h5>
               </div>
-              {Gyms.map(gym => (
-                <div className='card-container'>
-                  <GymCard room={room}name={gym.name} location={gym.location} popular_times={gym.popular_times} date={day} time={time}max_cap={gym.max_cap} threshold={threshold}/>
-                </div>
-              ))}
+              {Gyms.map(gym => {
+                let room = "cardio";
+                let room_data;
+                if(room == "cardio"){
+                  room_data = gym.rooms.cardio;
+                }else if(room == "weight"){
+                  room_data = gym.rooms.weight;
+                }else{
+                  room_data = gym.rooms.basketball;
+                }
+                return (<div className='card-container'>
+                  <GymCard name={gym.name} location={gym.location} popular_times={room_data} date={day} time={time}max_cap={gym.max_cap} threshold={threshold} />
+                </div>)
+              })}
             </div>
             <div className="gridHalf2">
               <RoomSelector setRoom={setRoom}/>
