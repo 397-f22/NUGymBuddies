@@ -19,7 +19,7 @@ const GymCard = ({room,name,location,popular_times,max_cap, date, time, threshol
         </Card.Text>
         </div>
         <div className='chart-wrapper'>
-        <Chart room={room}popular_times={popular_times} date={date} time={time} threshold={threshold}></Chart>
+        <Chart room={room} popular_times={popular_times} date={date} time={time} threshold={threshold}></Chart>
         </div>
         <Button id="goingButton" className="goingButton" style={{fontSize: 8}}>Going</Button>
       </Card.Body>
