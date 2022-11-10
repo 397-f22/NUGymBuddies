@@ -77,7 +77,9 @@ button {
   grid-column-start: 2;
   grid-column-end: 2;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-direction: column;
+
 }
 
 .capacityDiv {

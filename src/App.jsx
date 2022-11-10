@@ -52,6 +52,7 @@ const App = () => {
                 <h4>Capacity</h4>
                 <Slider defaultValue={0} aria-label="Threshold" valueLabelDisplay="auto" step={5} getAriaValueText={valuetext} onChange={handleChange} onChangeCommitted={handleChange} min={0} max={100}/>
               </div>
+              <RoomSelector />
               <div className="legendDiv">
                 <h4>Legend</h4>
                 <h5>🟦 = Current Occupancy | 🟩 = Under Selected Capacity | 🟥 = Over Selected Capacity</h5>
@@ -72,7 +73,6 @@ const App = () => {
               })}
             </div>
             <div className="gridHalf2">
-              <RoomSelector />
               <TimePicker setTime={setTime}/>
             </div>
           </div>
