@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { initializeApp } from "firebase/app";
 import { getDatabase, onValue, ref, update} from 'firebase/database';
 
-const database = getDatabase(firebase);
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyC60rr3FRluRW6DKclZ6rB8K3y60lQGO58",
@@ -17,6 +17,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const firebase = initializeApp(firebaseConfig);
+
+const database = getDatabase(firebase);
 
 export const signInWithGoogle = () => {
   signInWithPopup(getAuth(firebase), new GoogleAuthProvider());

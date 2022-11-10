@@ -11,12 +11,16 @@ import Friends from './components/Friends';
 import RoomSelector from './components/RoomSelector';
 
 const App = () => {
-  const [data, error] = useDbData('/');
-  if (error) return <h1>Error loading data: {error.toString()}</h1>;
-  if (data === undefined) return <h1>Loading data...</h1>;
-  if (!data) return <h1>No data found</h1>;
+  // const [data, error] = useDbData('/');
+  // if (error) return <h1>Error loading data: {error.toString()}</h1>;
+  // if (data === undefined) return <h1>Loading data...</h1>;
+  // if (!data) return <h1>No data found</h1>;
   
   const [day,setDay] = useState(null);
+  const [time, setTime] = useState([]);
+  const [threshold,setThreshold] = useState(30)
+  const [room,setRoom] = useState("weight")
+
   function valuetext(value) {
     return `${value} %`;
   }
@@ -28,8 +32,7 @@ const App = () => {
     setDay(today.toDateString().slice(0,3))
 
   },[])
-  const [time, setTime] = useState([]);
-  const [threshold,setThreshold] = useState(30)
+
   const handleChange = (event, newValue) => {
     setThreshold(newValue);
     console.log(threshold)
@@ -58,12 +61,12 @@ const App = () => {
               </div>
               {Gyms.map(gym => (
                 <div className='card-container'>
-                  <GymCard name={gym.name} location={gym.location} popular_times={gym.popular_times} date={day} time={time}max_cap={gym.max_cap} threshold={threshold}/>
+                  <GymCard room={room}name={gym.name} location={gym.location} popular_times={gym.popular_times} date={day} time={time}max_cap={gym.max_cap} threshold={threshold}/>
                 </div>
               ))}
             </div>
             <div className="gridHalf2">
-              <RoomSelector />
+              <RoomSelector setRoom={setRoom}/>
               <TimePicker setTime={setTime}/>
             </div>
           </div>
