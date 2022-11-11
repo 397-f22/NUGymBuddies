@@ -57,7 +57,6 @@ const TimePicker = ({setTime}) => {
                     <div className="marginAuto" onClick={() => toggleTime("20")}><TimeButton id= "20" label="8:00 pm"/></div>
                     <div className="marginAuto" onClick={() => toggleTime("21")}><TimeButton id= "21" label="9:00 pm"/></div>
                     <div className="marginAuto" onClick={() => toggleTime("22")}><TimeButton id= "22" label="10:00 pm"/></div>
-                    <div className="marginAuto" onClick={() => toggleTime("23")}><TimeButton id= "23" label="11:00 pm"/></div>
                 </div>
             </div>
         </div>

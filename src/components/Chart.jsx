@@ -28,6 +28,7 @@ const Chart = ({room,popular_times, date, time, threshold})=>{
       },
       yAxis: {
         type: 'value',
+        show: false,
       },
       series: [
         // {

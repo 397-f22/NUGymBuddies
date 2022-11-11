@@ -53,7 +53,7 @@ const App = () => {
             <div className="gridHalf1">
               <div className="capacityDiv">
                 <h4>Capacity</h4>
-                <Slider defaultValue={0} aria-label="Threshold" valueLabelDisplay="auto" step={5} getAriaValueText={valuetext} onChange={handleChange} onChangeCommitted={handleChange} min={0} max={100}/>
+                <Slider defaultValue={50} aria-label="Threshold" valueLabelDisplay="auto" step={5} getAriaValueText={valuetext} onChange={handleChange} onChangeCommitted={handleChange} min={0} max={100}/>
               </div>
               <RoomSelector setRoom={setRoom} />
               <div className="legendDiv">

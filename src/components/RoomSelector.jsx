@@ -15,7 +15,7 @@ const RoomSelector = ({setRoom}) => {
   };
 
   return (
-    <Box sx={{ minWidth: 128 }}>
+    <Box sx={{ minWidth: 145 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Room</InputLabel>
         <Select
@@ -25,9 +25,9 @@ const RoomSelector = ({setRoom}) => {
           label="Age"
           onChange={handleChange}
         >
-          <MenuItem value={"weight"}>Weight</MenuItem>
-          <MenuItem value={"cardio"}>Cardio</MenuItem>
-          <MenuItem value={"basketball"}>Basketball</MenuItem>
+          <MenuItem value={"weight"}>Weight Room</MenuItem>
+          <MenuItem value={"cardio"}>Cardio Room</MenuItem>
+          <MenuItem value={"basketball"}>Basketball Courts</MenuItem>
         </Select>
       </FormControl>
     </Box>
