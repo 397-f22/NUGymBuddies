@@ -1,5 +1,5 @@
 import '../styles/NavBar.css';
-import SignIn from './signin';
+import SignIn from './Signin';
 
 const NavBar = () => {
     return (
