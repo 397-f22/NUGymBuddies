@@ -28,6 +28,7 @@ const Chart = ({room,popular_times, date, time, threshold})=>{
       },
       yAxis: {
         type: 'value',
+        show: false,
       },
       series: [
         // {
@@ -100,7 +101,7 @@ const Chart = ({room,popular_times, date, time, threshold})=>{
       eChartsRef.current?.getEchartsInstance().setOption(option);
 }
 
-},[time])
+},[time, threshold])
 
     // console.log("y_data", y_data);
     // const y_data_green = x_data_form_time.map((x)=> {
