@@ -1,6 +1,9 @@
-import {describe, expect, test} from 'vitest';
-import {fireEvent, render, screen} from '@testing-library/react';
+import {describe, expect, test, vi} from 'vitest';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import App from './App';
+import { useAuthState } from './utilities/firebase';
+
+vi.mock('./utilities/firebase.js');
 
 describe('render tests', () => {
     
@@ -10,3 +13,24 @@ describe('render tests', () => {
   });
 
 });
+
+describe("select room", ()=> {
+  it('shows cardio room on gym card when applying cardio room filter', async () => {
+      const {getByRole} = render(<App />);
+      await fireEvent.click(screen.getByTestId("room selector"))
+      await fireEvent.mouseDown(screen.getByTestId("room selector"))
+      const roomDropdown = within(getByRole('listbox'))
+      await fireEvent.click(roomDropdown.getByTestId("cardioroom"))
+      const cardTitle = screen.getByText(/Henry/i)
+      expect(cardTitle.textContent).toBe('Henry Crown Sports Pavilion:weight room')
+  })
+})
+
+describe("login", () => {
+  it('shows Sign Out if logged in', async () => {
+    const mockUser = { displayName: 'Joe' };
+    useAuthState.mockReturnValue([mockUser]);
+    render(<App />);
+    await expect(screen.queryByText(/Sign Out/i)).toBeDefined();
+  });
+})

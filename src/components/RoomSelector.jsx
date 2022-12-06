@@ -24,9 +24,12 @@ const RoomSelector = ({setRoom}) => {
           // value={age}
           label="Age"
           onChange={handleChange}
+          data-testid="room selector"
+          role="listbox"
+          native={true}
         >
           <MenuItem value={"weight"}>Weight Room</MenuItem>
-          <MenuItem value={"cardio"}>Cardio Room</MenuItem>
+          <MenuItem data-testid="cardioroom" value={"cardio"}>Cardio Room</MenuItem>
           <MenuItem value={"basketball"}>Basketball Courts</MenuItem>
         </Select>
       </FormControl>

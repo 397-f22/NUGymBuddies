@@ -10,7 +10,7 @@ const SignOutButton = () => (
 );
 
 const AuthButton = () => {
-  const [user] = useAuthState();
+  const user = useAuthState();
   return user ? <SignOutButton /> : <SignInButton />;
 };
 
