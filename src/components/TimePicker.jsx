@@ -44,7 +44,7 @@ const TimePicker = ({setTime}) => {
                     <div className="marginAuto" onClick={() => toggleTime("6")}><TimeButton id= "6" label="6:00 am"/></div>
                     <div className="marginAuto" onClick={() => toggleTime("7")}><TimeButton id= "7" label="7:00 am"/></div>
                     <div className="marginAuto" onClick={() => toggleTime("8")}><TimeButton id= "8" label="8:00 am"/></div>
-                    <div className="marginAuto" onClick={() => toggleTime("9")}><TimeButton id= "9" label="9:00 am"/></div>
+                    <div className="marginAuto" onClick={() => toggleTime("9")}><TimeButton role="9AM" id= "9" label="9:00 am"/></div>
                     <div className="marginAuto" onClick={() => toggleTime("10")}><TimeButton id= "10" label="10:00 am"/></div>
                     <div className="marginAuto" onClick={() => toggleTime("11")}><TimeButton id= "11" label="11:00 am"/></div>
                     <div className="marginAuto" onClick={() => toggleTime("12")}><TimeButton id= "12" label="12:00 pm"/></div>
