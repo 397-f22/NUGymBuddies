@@ -1,4 +1,4 @@
-import {describe, expect, test, vi} from 'vitest';
+import {describe, expect, it, test, vi} from 'vitest';
 import {fireEvent, render, screen, within} from '@testing-library/react';
 import App from './App';
 import { useAuthState } from './utilities/firebase';
@@ -88,4 +88,16 @@ describe("select button: hard test", () => {
     await fireEvent.click(screen.getByTestId("time picker"));
     expect(screen.getByTestId("time picker").className).toBe("openButton-close")
   });
+
+
+  //jim's test
+  describe("buttons from 6am to 10pm",()=>{
+    it("click select time, open dropdown, check if all the times are there",async()=>{
+      const {container} = render(<App />);
+      await fireEvent.click(screen.getByTestId("time picker"));
+      expect((await screen.findAllByTestId("time slot")).length).toBe(17);
+
+    })
+
+  })
 })
