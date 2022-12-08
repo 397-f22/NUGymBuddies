@@ -38,7 +38,7 @@ const TimePicker = ({setTime}) => {
     return (
         <div className="dropdown">
             <div className="dropdownBlock">
-                <button className = {open ? "openButton-open" : "openButton-close"} onClick={() => openMenu()}>
+                <button className = {open ? "openButton-open" : "openButton-close"} onClick={() => openMenu()} data-testid="time picker">
                     <span>Select Time</span> <i className="bi bi-caret-down-fill caret"></i></button>
                 <div className={open ? "time-grid" : "time-grid-close"} >
                     <div className="marginAuto" onClick={() => toggleTime("6")}><TimeButton id= "6" label="6:00 am"/></div>

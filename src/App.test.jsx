@@ -45,3 +45,11 @@ describe("all rooms", ()=> {
       
   })
 })
+
+describe("select button", () => {
+  it('show timeslot dropdown after click "Select time" button', async () => {
+    const {container} = render(<App />);
+    await fireEvent.click(screen.getByTestId("time picker"));
+    expect(screen.getByTestId("time picker").className).toBe("openButton-open")
+  });
+})
