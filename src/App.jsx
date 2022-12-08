@@ -19,7 +19,7 @@ const App = () => {
   const [day,setDay] = useState(null);
   const [time, setTime] = useState([]);
   const [threshold,setThreshold] = useState(30)
-  const [room,setRoom] = useState("weight")
+  const [room, setRoom] = useState("weight")
 
   function valuetext(value) {
     return `${value} %`;

@@ -34,3 +34,14 @@ describe("login", () => {
     await expect(screen.queryByText(/Sign Out/i)).toBeDefined();
   });
 })
+
+describe("all rooms", ()=> {
+  it('shows cardio room, weight room, basketball courts', async () => {
+      const {getByRole} = render(<App />);
+      await fireEvent.click(screen.getByTestId("room selector"))
+      await fireEvent.mouseDown(screen.getByTestId("room selector"))
+      const roomDropdown = within(getByRole('listbox'))
+      expect(roomDropdown.textContent).toBe("Weight Room Cardio Room Basketball Courts")
+      
+  })
+})
