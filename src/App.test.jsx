@@ -55,3 +55,37 @@ describe("button passing", ()=> {
     expect(times).toBe(["9"])
   })
 })
+
+// describe("all rooms", ()=> {
+//   it('shows cardio room, weight room, basketball courts', async () => {
+//       const {getByRole} = render(<App />);
+//       await fireEvent.click(screen.getByTestId("room selector"))
+//       await fireEvent.mouseDown(screen.getByTestId("room selector"))
+//       const roomDropdown = within(getByRole('listbox'))
+//       expect(roomDropdown.textContent).toBe("Weight Room Cardio Room Basketball Courts")
+      
+//   })
+// })
+
+describe("select button: success test", () => {
+  it('show timeslot dropdown after click "Select time" button', async () => {
+    const {container} = render(<App />);
+    await fireEvent.click(screen.getByTestId("time picker"));
+    expect(screen.getByTestId("time picker").className).toBe("openButton-open")
+  });
+})
+describe("select button: failure test", () => {
+  it('timeslot dropdown is not showing up when no one click the button', async () => {
+    const {container} = render(<App />);
+    expect(screen.getByTestId("time picker").className).not.toBe("openButton-open")
+  });
+})
+describe("select button: hard test", () => {
+  it('click select button, open dropdown and close it', async () => {
+    const {container} = render(<App />);
+    await fireEvent.click(screen.getByTestId("time picker"));
+    expect(screen.getByTestId("time picker").className).toBe("openButton-open")
+    await fireEvent.click(screen.getByTestId("time picker"));
+    expect(screen.getByTestId("time picker").className).toBe("openButton-close")
+  });
+})
