@@ -36,23 +36,27 @@ describe("login", () => {
     await expect(screen.queryByText(/Sign Out/i)).toBeDefined();
   });
 })
-describe("default date", ()=> {
+// describe("default position", ()=> {
+//   it('on landing page, date is current date', async () => {
+//     const currDate = new dayjs()
+//     render(<App />);
+//     const date = screen.queryByTestId('date-picker')
+//     expect(date.getPropertyValue(value)).toBe(currDate)
+//   })
+// })
+describe("default position", ()=> {
   it('on landing page, date is current date', async () => {
-    const currDate = new dayjs()
-    const {getByRole} = render(<Calendar />);
-    const date = getByRole('date-picker').value
-    expect(date).toBe(currDate)
+    const {container} = render(<App />);
+    expect(screen.getByTestId("slide").defaultValue).toBe(50)
   })
 })
 
 describe("button passing", ()=> {
   it('on landing page, date is current date', async () => {
     render(<App />);
-    render(<Chart />)
-    const times = getByRole('time')
-    expect(times).toBe([])
-    await fireEvent.click(screen.getByTestId("9AM"))
-    expect(times).toBe(["9"])
+    await fireEvent.click(screen.getByTestId("time picker"));
+    const styles = window.getComputedStyle(screen.getByTestId("time picker"), null);
+    expect(styles.getPropertyValue("background-color")).toBe("cornflowerblue")
   })
 })
 

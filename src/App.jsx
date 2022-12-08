@@ -47,13 +47,13 @@ const App = () => {
             <h3>Fancy a workout?</h3>
           </div>
           <div className="date-picker">   
-            <Calendar setDay={setDay}/>
+            <Calendar data-testid="date-picker" setDay={setDay}/>
           </div>
           <div className="grid">
             <div className="gridHalf1">
               <div className="capacityDiv">
                 <h4>Capacity</h4>
-                <Slider defaultValue={50} aria-label="Threshold" valueLabelDisplay="auto" step={5} getAriaValueText={valuetext} onChange={handleChange} onChangeCommitted={handleChange} min={0} max={100}/>
+                <Slider defaultValue={50} data-testid="slide" aria-label="Threshold" valueLabelDisplay="auto" step={5} getAriaValueText={valuetext} onChange={handleChange} onChangeCommitted={handleChange} min={0} max={100}/>
               </div>
               <RoomSelector setRoom={setRoom} />
               <div className="legendDiv">

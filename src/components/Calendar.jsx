@@ -21,7 +21,6 @@ export default function ResponsiveDatePickers({setDay}) {
       <MobileDatePicker
         label="Pick a date"
         value={value}
-        role="date-picker"
         onChange={(newValue) => {
           setValue(newValue);
           console.log(newValue.date());
