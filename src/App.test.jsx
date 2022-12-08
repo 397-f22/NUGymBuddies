@@ -1,4 +1,4 @@
-import {describe, expect, test, vi} from 'vitest';
+import {describe, expect, it, test, vi} from 'vitest';
 import {fireEvent, render, screen, within} from '@testing-library/react';
 import App from './App';
 import { useAuthState } from './utilities/firebase';
@@ -60,13 +60,17 @@ describe("button passing", ()=> {
   })
 })
 
-// describe("all rooms", ()=> {
-//   it('shows cardio room, weight room, basketball courts', async () => {
-//       const {getByRole} = render(<App />);
-//       await fireEvent.click(screen.getByTestId("room selector"))
-//       await fireEvent.mouseDown(screen.getByTestId("room selector"))
-//       const roomDropdown = within(getByRole('listbox'))
-//       expect(roomDropdown.textContent).toBe("Weight Room Cardio Room Basketball Courts")
+ describe("all rooms", ()=> {
+  it('shows cardio room, weight room, basketball courts', async () => {
+      const {getByRole} = render(<App />);
+      await fireEvent.click(screen.getByTestId("room selector"))
+      await fireEvent.mouseDown(screen.getByTestId("room selector"))
+      const roomDropdown = within(getByRole('listbox'))
+    await expect(roomDropdown.queryByText(/Weight Room Cardio Room Basketball Courts/i)).toBeDefined();
+  })
+})
+
+
       
 //   })
 // })
@@ -92,4 +96,26 @@ describe("select button: hard test", () => {
     await fireEvent.click(screen.getByTestId("time picker"));
     expect(screen.getByTestId("time picker").className).toBe("openButton-close")
   });
+
+
+  //jim's test
+  describe("buttons from 6am to 10pm",()=>{
+    it("click select time, open dropdown, check if all the times are there",async()=>{
+      const {container} = render(<App />);
+      await fireEvent.click(screen.getByTestId("time picker"));
+      expect((await screen.findAllByTestId("time slot")).length).toBe(17);
+
+    })
+
+  })
+
+  describe("test chart display correctness",()=>{
+    it("selects a date, selects a time, check the chart",async()=>{
+      const {container} = render(<App />);
+      expect((await screen.getAllByTestId("echart")).length).toBe(2);
+    })
+  })
 })
+
+
+
