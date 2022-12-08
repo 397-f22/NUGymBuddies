@@ -104,6 +104,13 @@ describe("select button: hard test", () => {
     })
 
   })
+
+  describe("test chart display correctness",()=>{
+    it("selects a date, selects a time, check the chart",async()=>{
+      const {container} = render(<App />);
+      expect((await screen.getAllByTestId("echart")).length).toBe(2);
+    })
+  })
 })
 
 
